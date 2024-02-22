@@ -1,0 +1,317 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  color: rgb(44, 44, 44);
+  font-family: "Geometria",sans-serif;
+}
+
+h1 {
+  color: #64B4E6;
+  margin: 32px 0 64px 0;
+  font-weight: 400;
+}
+
+.container {
+  background-color: #FBFBFB;
+  width: 100%;
+  max-width: 900px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #ECEDED;
+  padding: 0 64px 64px 64px;
+  position: relative;
+}
+
+.tabs {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #05BE50;
+  margin: 0 0 32px 0;
+  padding: 16px;
+}
+
+.tabs p {
+  padding: 8px;
+}
+
+.tabs p:hover {
+  color: #64B4E6;
+  cursor: pointer;
+}
+.tabs .active {
+  color: #64B4E6;
+  position: relative;
+}
+
+.line {
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  top: 98px;
+  background-color: rgb(231, 231, 231);
+}
+
+.tabs .active::before {
+  content: "";
+  width: 200%;
+  height: 4px;
+  background-color: #64B4E6;
+  position: absolute;
+  bottom: -32px;
+  left: -50%;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+.toggle-wrapper {
+  display: flex;
+}
+
+.toggle-wrapper img {
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toggle {
+  background-color: #64B4E6;
+  height: 32px;
+  width: 220px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 4px 0 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.toggle span:first-of-type {
+  color: white;
+}
+
+.toggle span:last-of-type {
+  background-color: white;
+  color: #05BE50;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+.sessions-card {
+  background-color: #E0F0FA;
+  text-align: center;
+  padding: 32px;
+  width: 50%;
+  text-transform: uppercase;
+  margin: 16px 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.sessions-card p {
+  color: rgb(44, 44, 44);
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px 0 0 0;
+}
+.sessions-card .number {
+  color: #05BE50;
+  font-size: 54px;
+  margin: 0;
+}
+
+.description {
+  line-height: 32px;
+  margin: 16px 0 32px 0;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.slider .bar {
+  width: 100%;
+  height: 16px;
+  background-color: rgb(248, 248, 248);
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 20px;
+}
+
+.slider .progress {
+  width: 59%;
+  height: 18px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 64, 26, 1) 0%,
+    rgba(5, 190, 80, 1) 100%
+  );
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider .point {
+  height: 24px;
+  width: 24px;
+  background-color: #05BE50;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  left: 57%;
+  border: 2px solid white;
+  transition: 0.15s transform ease;
+}
+
+.slider .point:hover {
+  cursor: pointer;
+  transform: scale(1.15);
+}
+
+.scale {
+  width: 100%;
+}
+.slider .scale ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  font-weight: bold;
+  color: rgb(166, 166, 166);
+}
+
+.card-wrapper {
+  display: flex;
+}
+.card {
+  background-color: #E0F0FA;
+  border-radius: 10px;
+  margin: 16px;
+  padding: 16px 32px;
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 400;
+  transition: 0.15s transform ease;
+  color: rgb(44, 44, 44);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card .top-section {
+  padding: 8px;
+  font-weight: 100;
+}
+
+.card .top-section p {
+  margin: 4px 0;
+  
+}
+
+.card .price {
+  font-size: 42px;
+  color: #05BE50;
+  font-weight: 900;
+}
+
+.card .period {
+  color: #0039A6;
+  font-weight: 400;
+}
+
+.card hr {
+  width: 30%;
+  border: 1px solid rgb(210, 210, 210);
+  border-radius: 2px;
+}
+
+.card button {
+  border: none;
+  color: white;
+  background-color: #05BE50;
+  padding: 16px;
+  border-radius: 10px;
+  transition: 0.15s transform ease;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.card button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.card .save-header {
+  color: white;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 64, 26, 1) 0%,
+    rgba(5, 190, 80, 1) 100%
+  );
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+  .card-wrapper {
+    flex-wrap: wrap-reverse;
+  }
+  .sessions-card {
+    width: 80%;
+  }
+  .slider .progress {
+    width: 57%;
+  }
+  
+  .slider .point {
+    left: 54%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+  h1 {
+    margin: 0 0 16px 0;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .sessions-card {
+    width: 100%;
+  }
+  .toggle-wrapper {
+    width: 90%;
+    justify-content: space-around;
+  }
+  .slider .progress {
+    width: 58%;
+  }
+  
+  .slider .point {
+    left: 55%;
+  }
+}
